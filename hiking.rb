@@ -3,11 +3,12 @@ require 'json'
 require 'forecast_io'
 
 ForecastIO.configure do |configuration|
-  configuration.api_key = 'd05e5f4c1744a7fb02dfc4dcb72febdc'
+  configuration.api_key = 'put_key_here'
 end
 
+# get Charlotte temp
 forecast = ForecastIO.forecast(35.2269, -80.8433)
-#puts "The forecast for today is #{forecast}"
+
 clt = forecast.currently.temperature
 
 def going_hiking(temp)
@@ -21,9 +22,4 @@ def going_hiking(temp)
   end
 end
   
-puts going_hiking(clt)  
-  
-#puts "What is the temp?"
-#current_temp = gets.chomp.to_i
-
-#puts going_hiking(current_temp)
+puts going_hiking(clt)
