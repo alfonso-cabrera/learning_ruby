@@ -1,0 +1,1 @@
+#! /usr/bin/ruby -wdef fizzbuzz(n)  if ( n % 3 == 0) && (n % 5 != 0)    puts "#{n} => Fizz"  elsif (n % 3 != 0) && (n % 5 == 0)    puts "#{n} => Buzz"  elsif (n % 3 == 0) && (n % 5 == 0)    puts "#{n} => FizzBuzz"  else    puts "#{n} is not FizzBuzzy!"  endend(1..100).each {|n| puts fizzbuzz(n)}
